@@ -121,6 +121,19 @@
   </style>
 </head>
 <body>
+
+<script>
+  // 🌐 SET YOUR MAIN WEBSITE URL HERE (ONLY ONE PLACE!)
+  const MAIN_URL = "/Tools/https://globalloancalc.com/global-loan-calculator.html";
+
+  // Automatically update all placeholders
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('[data-main-link]').forEach(el => {
+      const path = el.getAttribute('data-main-link');
+      el.href = MAIN_URL + path;
+    });
+  });
+</script>
   <header class="container" role="banner">
     <div class="logo" aria-label="GlobalLoanCalc logo"><i class="fas fa-globe-americas" aria-hidden></i><span>GlobalLoanCalc</span></div>
     <nav role="navigation" aria-label="Main navigation">
@@ -128,7 +141,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><!-- 🔗 MAIN WEBSITE LINK PLACEHOLDER → Replace YOUR-WEBSITE.com with your domain -->
-        <a href="/Tools/https://YOUR-WEBSITE.com/global-loan-calculator.html">Calculator</a></li>
+        <a href="#" data-main-link="/global-loan-calculator.html">Calculator</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -143,10 +156,10 @@
         <p class="lead">Use our fast, browser-based loan calculator to estimate monthly payments, total interest, payoff date, and download a printable amortization schedule. No signup required — your inputs stay private.</p>
 
         <div class="ctas">
-          <a class="btn btn-primary" href="/global-loan-calculator.html" aria-label="Open the calculator">Open Calculator</a>
+          <a class="btn btn-primary" href="#" data-main-link="/global-loan-calculator.html" aria-label="Open the calculator">Open Calculator</a>
           <!-- Added Main Loan & EMI Page Link -->
           <!-- 🔗 MAIN WEBSITE LINK PLACEHOLDER → Replace YOUR-WEBSITE.com with your domain -->
-          <a class="btn btn-ghost" href="https://YOUR-WEBSITE.com/global-loan-calculator.html" aria-label="Go to main Loan & EMI Calculator Page">Loan & EMI Page</a>
+          <a class="btn btn-ghost" href="#" data-main-link="/global-loan-calculator.html" aria-label="Go to main Loan & EMI Calculator Page">Loan & EMI Page</a>
           <a class="btn btn-ghost" href="#how" aria-label="Learn how it works">How it works</a>
         </div>
 
@@ -176,7 +189,7 @@
         </div>
 
         <div style="margin-top:14px;display:flex;gap:8px">
-          <a class="btn btn-primary" href="/global-loan-calculator.html">Try Now</a>
+          <a class="btn btn-primary" href="#" data-main-link="/global-loan-calculator.html">Try Now</a>
           <a class="btn btn-ghost" href="#how">Learn More</a>
         </div>
 
@@ -246,4 +259,5 @@
   </script>
 </body>
 </html>
+
 
